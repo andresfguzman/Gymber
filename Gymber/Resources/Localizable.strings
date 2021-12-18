@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Gymber
+
+  Created by Andrés Guzmán on 18/12/21.
+  
+*/
+
+"General.NavBar.Title" = "Categories";
+
+"General.Alert.Error.Title" = "Something's wrong";
+"General.Alert.OK" = "OK";
+"General.Alert.retry" = "Retry";

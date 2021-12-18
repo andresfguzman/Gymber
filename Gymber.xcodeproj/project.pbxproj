@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E224F31276E368B00E788AB /* GymberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F30276E368B00E788AB /* GymberService.swift */; };
+		7E224F33276E36CF00E788AB /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F32276E36CF00E788AB /* BaseService.swift */; };
+		7E224F35276E376200E788AB /* UseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F34276E376200E788AB /* UseCaseImpl.swift */; };
+		7E224F37276E37B400E788AB /* URLSession+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F36276E37B400E788AB /* URLSession+Utils.swift */; };
+		7E224F39276E382400E788AB /* GetGyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F38276E382400E788AB /* GetGyms.swift */; };
+		7E224F3B276E388000E788AB /* GymDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3A276E388000E788AB /* GymDTO.swift */; };
+		7E224F3D276E3D1600E788AB /* GetGymsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3C276E3D1600E788AB /* GetGymsService.swift */; };
+		7E224F3F276E41AC00E788AB /* GetGymsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3E276E41AC00E788AB /* GetGymsImpl.swift */; };
+		7E224F41276E47F000E788AB /* DispatchQueue+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F40276E47F000E788AB /* DispatchQueue+Utils.swift */; };
+		7E224F43276E4AB100E788AB /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F42276E4AB100E788AB /* UIImageView+Utils.swift */; };
+		7E224F45276E4DC700E788AB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F44276E4DC700E788AB /* HomeViewModel.swift */; };
+		7E224F47276E933000E788AB /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F46276E933000E788AB /* String+Utils.swift */; };
+		7E224F49276E93AE00E788AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E224F48276E93AE00E788AB /* Localizable.strings */; };
 		7E5F38D3276C0428009BD960 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38D2276C0428009BD960 /* AppDelegate.swift */; };
 		7E5F38D5276C0428009BD960 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38D4276C0428009BD960 /* SceneDelegate.swift */; };
-		7E5F38D7276C0428009BD960 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38D6276C0428009BD960 /* ViewController.swift */; };
-		7E5F38DA276C0428009BD960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F38D8276C0428009BD960 /* Main.storyboard */; };
+		7E5F38D7276C0428009BD960 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38D6276C0428009BD960 /* HomeViewController.swift */; };
 		7E5F38DC276C0429009BD960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F38DB276C0429009BD960 /* Assets.xcassets */; };
 		7E5F38DF276C0429009BD960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F38DD276C0429009BD960 /* LaunchScreen.storyboard */; };
 		7E5F38EA276C0429009BD960 /* GymberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38E9276C0429009BD960 /* GymberTests.swift */; };
-		7E5F38F4276C0429009BD960 /* GymberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38F3276C0429009BD960 /* GymberUITests.swift */; };
-		7E5F38F6276C0429009BD960 /* GymberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38F5276C0429009BD960 /* GymberUITestsLaunchTests.swift */; };
+		7E5F3904276C07A6009BD960 /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F3903276C07A6009BD960 /* CardCollectionView.swift */; };
+		7EED99B7276D5B2D0098B4F8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99B6276D5B2D0098B4F8 /* CardView.swift */; };
+		7EED99B9276D5B610098B4F8 /* CardCollectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99B8276D5B610098B4F8 /* CardCollectionProtocols.swift */; };
+		7EED99BB276D5B790098B4F8 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99BA276D5B790098B4F8 /* Double+Utils.swift */; };
+		7EED99BD276D5B830098B4F8 /* CGFloat+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99BC276D5B830098B4F8 /* CGFloat+Utils.swift */; };
+		7EED99BF276D5BC30098B4F8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99BE276D5BC30098B4F8 /* CardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,29 +42,37 @@
 			remoteGlobalIDString = 7E5F38CE276C0428009BD960;
 			remoteInfo = Gymber;
 		};
-		7E5F38F0276C0429009BD960 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E5F38C7276C0428009BD960 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E5F38CE276C0428009BD960;
-			remoteInfo = Gymber;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E224F30276E368B00E788AB /* GymberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymberService.swift; sourceTree = "<group>"; };
+		7E224F32276E36CF00E788AB /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		7E224F34276E376200E788AB /* UseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseImpl.swift; sourceTree = "<group>"; };
+		7E224F36276E37B400E788AB /* URLSession+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Utils.swift"; sourceTree = "<group>"; };
+		7E224F38276E382400E788AB /* GetGyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGyms.swift; sourceTree = "<group>"; };
+		7E224F3A276E388000E788AB /* GymDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDTO.swift; sourceTree = "<group>"; };
+		7E224F3C276E3D1600E788AB /* GetGymsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsService.swift; sourceTree = "<group>"; };
+		7E224F3E276E41AC00E788AB /* GetGymsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsImpl.swift; sourceTree = "<group>"; };
+		7E224F40276E47F000E788AB /* DispatchQueue+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Utils.swift"; sourceTree = "<group>"; };
+		7E224F42276E4AB100E788AB /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		7E224F44276E4DC700E788AB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7E224F46276E933000E788AB /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		7E224F48276E93AE00E788AB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7E5F38CF276C0428009BD960 /* Gymber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gymber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F38D2276C0428009BD960 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5F38D4276C0428009BD960 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E5F38D6276C0428009BD960 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E5F38D9276C0428009BD960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7E5F38D6276C0428009BD960 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E5F38DB276C0429009BD960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E5F38DE276C0429009BD960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E5F38E0276C0429009BD960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5F38E5276C0429009BD960 /* GymberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F38E9276C0429009BD960 /* GymberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymberTests.swift; sourceTree = "<group>"; };
-		7E5F38EF276C0429009BD960 /* GymberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E5F38F3276C0429009BD960 /* GymberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymberUITests.swift; sourceTree = "<group>"; };
-		7E5F38F5276C0429009BD960 /* GymberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E5F3903276C07A6009BD960 /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		7EED99B6276D5B2D0098B4F8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		7EED99B8276D5B610098B4F8 /* CardCollectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionProtocols.swift; sourceTree = "<group>"; };
+		7EED99BA276D5B790098B4F8 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
+		7EED99BC276D5B830098B4F8 /* CGFloat+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Utils.swift"; sourceTree = "<group>"; };
+		7EED99BE276D5BC30098B4F8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,22 +90,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E5F38EC276C0429009BD960 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E224F2D276E35AA00E788AB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F38D2276C0428009BD960 /* AppDelegate.swift */,
+				7E5F38D4276C0428009BD960 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7E224F2E276E360D00E788AB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7E224F34276E376200E788AB /* UseCaseImpl.swift */,
+				7E224F30276E368B00E788AB /* GymberService.swift */,
+				7E224F32276E36CF00E788AB /* BaseService.swift */,
+				7E224F2F276E367400E788AB /* UseCases */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7E224F2F276E367400E788AB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				7E224F3A276E388000E788AB /* GymDTO.swift */,
+				7E224F3C276E3D1600E788AB /* GetGymsService.swift */,
+				7E224F38276E382400E788AB /* GetGyms.swift */,
+				7E224F3E276E41AC00E788AB /* GetGymsImpl.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		7E224F4A276E93C500E788AB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7E224F4B276E93D000E788AB /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7E224F4B276E93D000E788AB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F38D6276C0428009BD960 /* HomeViewController.swift */,
+				7E224F44276E4DC700E788AB /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7E224F4C276E93DC00E788AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F38DB276C0429009BD960 /* Assets.xcassets */,
+				7E224F48276E93AE00E788AB /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7E5F38C6276C0428009BD960 = {
 			isa = PBXGroup;
 			children = (
 				7E5F38D1276C0428009BD960 /* Gymber */,
 				7E5F38E8276C0429009BD960 /* GymberTests */,
-				7E5F38F2276C0429009BD960 /* GymberUITests */,
 				7E5F38D0276C0428009BD960 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +164,6 @@
 			children = (
 				7E5F38CF276C0428009BD960 /* Gymber.app */,
 				7E5F38E5276C0429009BD960 /* GymberTests.xctest */,
-				7E5F38EF276C0429009BD960 /* GymberUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +171,14 @@
 		7E5F38D1276C0428009BD960 /* Gymber */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F38D2276C0428009BD960 /* AppDelegate.swift */,
-				7E5F38D4276C0428009BD960 /* SceneDelegate.swift */,
-				7E5F38D6276C0428009BD960 /* ViewController.swift */,
-				7E5F38D8276C0428009BD960 /* Main.storyboard */,
-				7E5F38DB276C0429009BD960 /* Assets.xcassets */,
-				7E5F38DD276C0429009BD960 /* LaunchScreen.storyboard */,
 				7E5F38E0276C0429009BD960 /* Info.plist */,
+				7E5F38DD276C0429009BD960 /* LaunchScreen.storyboard */,
+				7E224F2D276E35AA00E788AB /* App */,
+				7E224F4C276E93DC00E788AB /* Resources */,
+				7E224F2E276E360D00E788AB /* Core */,
+				7EDCAAF4276D5A8F0082D9B2 /* Extensions */,
+				7E224F4A276E93C500E788AB /* Modules */,
+				7E5F3902276C05AE009BD960 /* CardsView */,
 			);
 			path = Gymber;
 			sourceTree = "<group>";
@@ -118,13 +191,28 @@
 			path = GymberTests;
 			sourceTree = "<group>";
 		};
-		7E5F38F2276C0429009BD960 /* GymberUITests */ = {
+		7E5F3902276C05AE009BD960 /* CardsView */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F38F3276C0429009BD960 /* GymberUITests.swift */,
-				7E5F38F5276C0429009BD960 /* GymberUITestsLaunchTests.swift */,
+				7EED99B8276D5B610098B4F8 /* CardCollectionProtocols.swift */,
+				7E5F3903276C07A6009BD960 /* CardCollectionView.swift */,
+				7EED99B6276D5B2D0098B4F8 /* CardView.swift */,
+				7EED99BE276D5BC30098B4F8 /* CardViewModel.swift */,
 			);
-			path = GymberUITests;
+			path = CardsView;
+			sourceTree = "<group>";
+		};
+		7EDCAAF4276D5A8F0082D9B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EED99BA276D5B790098B4F8 /* Double+Utils.swift */,
+				7EED99BC276D5B830098B4F8 /* CGFloat+Utils.swift */,
+				7E224F36276E37B400E788AB /* URLSession+Utils.swift */,
+				7E224F40276E47F000E788AB /* DispatchQueue+Utils.swift */,
+				7E224F42276E4AB100E788AB /* UIImageView+Utils.swift */,
+				7E224F46276E933000E788AB /* String+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +253,6 @@
 			productReference = 7E5F38E5276C0429009BD960 /* GymberTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7E5F38EE276C0429009BD960 /* GymberUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7E5F38FF276C0429009BD960 /* Build configuration list for PBXNativeTarget "GymberUITests" */;
-			buildPhases = (
-				7E5F38EB276C0429009BD960 /* Sources */,
-				7E5F38EC276C0429009BD960 /* Frameworks */,
-				7E5F38ED276C0429009BD960 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7E5F38F1276C0429009BD960 /* PBXTargetDependency */,
-			);
-			name = GymberUITests;
-			productName = GymberUITests;
-			productReference = 7E5F38EF276C0429009BD960 /* GymberUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +267,6 @@
 						CreatedOnToolsVersion = 13.2;
 					};
 					7E5F38E4276C0429009BD960 = {
-						CreatedOnToolsVersion = 13.2;
-						TestTargetID = 7E5F38CE276C0428009BD960;
-					};
-					7E5F38EE276C0429009BD960 = {
 						CreatedOnToolsVersion = 13.2;
 						TestTargetID = 7E5F38CE276C0428009BD960;
 					};
@@ -221,7 +287,6 @@
 			targets = (
 				7E5F38CE276C0428009BD960 /* Gymber */,
 				7E5F38E4276C0429009BD960 /* GymberTests */,
-				7E5F38EE276C0429009BD960 /* GymberUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,19 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5F38DF276C0429009BD960 /* LaunchScreen.storyboard in Resources */,
+				7E224F49276E93AE00E788AB /* Localizable.strings in Resources */,
 				7E5F38DC276C0429009BD960 /* Assets.xcassets in Resources */,
-				7E5F38DA276C0428009BD960 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7E5F38E3276C0429009BD960 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E5F38ED276C0429009BD960 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,9 +316,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5F38D7276C0428009BD960 /* ViewController.swift in Sources */,
+				7E224F3D276E3D1600E788AB /* GetGymsService.swift in Sources */,
+				7EED99BB276D5B790098B4F8 /* Double+Utils.swift in Sources */,
+				7E224F3F276E41AC00E788AB /* GetGymsImpl.swift in Sources */,
+				7E224F45276E4DC700E788AB /* HomeViewModel.swift in Sources */,
+				7E5F3904276C07A6009BD960 /* CardCollectionView.swift in Sources */,
+				7E224F47276E933000E788AB /* String+Utils.swift in Sources */,
+				7EED99BD276D5B830098B4F8 /* CGFloat+Utils.swift in Sources */,
+				7E224F41276E47F000E788AB /* DispatchQueue+Utils.swift in Sources */,
+				7E224F43276E4AB100E788AB /* UIImageView+Utils.swift in Sources */,
+				7E5F38D7276C0428009BD960 /* HomeViewController.swift in Sources */,
 				7E5F38D3276C0428009BD960 /* AppDelegate.swift in Sources */,
+				7E224F3B276E388000E788AB /* GymDTO.swift in Sources */,
 				7E5F38D5276C0428009BD960 /* SceneDelegate.swift in Sources */,
+				7E224F39276E382400E788AB /* GetGyms.swift in Sources */,
+				7EED99B7276D5B2D0098B4F8 /* CardView.swift in Sources */,
+				7E224F37276E37B400E788AB /* URLSession+Utils.swift in Sources */,
+				7E224F31276E368B00E788AB /* GymberService.swift in Sources */,
+				7EED99B9276D5B610098B4F8 /* CardCollectionProtocols.swift in Sources */,
+				7EED99BF276D5BC30098B4F8 /* CardViewModel.swift in Sources */,
+				7E224F33276E36CF00E788AB /* BaseService.swift in Sources */,
+				7E224F35276E376200E788AB /* UseCaseImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +348,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E5F38EB276C0429009BD960 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E5F38F6276C0429009BD960 /* GymberUITestsLaunchTests.swift in Sources */,
-				7E5F38F4276C0429009BD960 /* GymberUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +356,9 @@
 			target = 7E5F38CE276C0428009BD960 /* Gymber */;
 			targetProxy = 7E5F38E6276C0429009BD960 /* PBXContainerItemProxy */;
 		};
-		7E5F38F1276C0429009BD960 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7E5F38CE276C0428009BD960 /* Gymber */;
-			targetProxy = 7E5F38F0276C0429009BD960 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7E5F38D8276C0428009BD960 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E5F38D9276C0428009BD960 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E5F38DD276C0429009BD960 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -367,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +498,7 @@
 				INFOPLIST_FILE = Gymber/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,7 +526,7 @@
 				INFOPLIST_FILE = Gymber/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +538,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -528,42 +582,6 @@
 			};
 			name = Release;
 		};
-		7E5F3900276C0429009BD960 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WYWUC4P4DY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aguzman.GymberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Gymber;
-			};
-			name = Debug;
-		};
-		7E5F3901276C0429009BD960 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WYWUC4P4DY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aguzman.GymberUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Gymber;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,15 +608,6 @@
 			buildConfigurations = (
 				7E5F38FD276C0429009BD960 /* Debug */,
 				7E5F38FE276C0429009BD960 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7E5F38FF276C0429009BD960 /* Build configuration list for PBXNativeTarget "GymberUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E5F3900276C0429009BD960 /* Debug */,
-				7E5F3901276C0429009BD960 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
