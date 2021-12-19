@@ -11,3 +11,4 @@
 "General.Alert.Error.Title" = "Something's wrong";
 "General.Alert.OK" = "OK";
 "General.Alert.retry" = "Retry";
+"CardView.Match.Message" = "It's a match!";

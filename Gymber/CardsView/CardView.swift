@@ -16,11 +16,10 @@ final class CardView: UIView {
     private var dislikeButton = UIButton()
     private var bottomCardView = UIView()
     private var topCardView = UIView()
-//    private var buttonStackView = UIStackView()
     
     private var containerView: UIView!
     
-    private let tiltRadian: CGFloat = 30 * CGFloat((Double.pi/180))
+    private let tiltRadian: CGFloat = 20 * CGFloat((Double.pi/180))
     
     weak var delegate: SwipeCardDelegate?
     
@@ -34,11 +33,7 @@ final class CardView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        if #available(iOS 13.0, *) {
-            backgroundColor = .systemBackground
-        } else {
-            backgroundColor = .white
-        }
+        backgroundColor = .white
         configContainer()
         setupPhotoView()
         setupTopCardView()
@@ -57,7 +52,7 @@ final class CardView: UIView {
         
         bottomCardView.addSubview(descriptionLabel)
         
-        descriptionLabel.text = "It's a match!"
+        descriptionLabel.text = "CardView.Match.Message".localized
         descriptionLabel.backgroundColor = .clear
         descriptionLabel.textColor = .white
         descriptionLabel.textAlignment = .center

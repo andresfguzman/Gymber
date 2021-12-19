@@ -32,6 +32,7 @@ final class HomeViewModel: HomeViewModelProtocol {
     func fetchModelData() {
         let useCase = GetGymsImpl()
         useCase.execute(for: .utrecht) { [weak self] result in
+            self?.isLoading = false
             switch result {
             case .success(let gymsVM):
                 self?.viewModelData = gymsVM

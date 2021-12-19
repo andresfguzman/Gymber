@@ -8,5 +8,6 @@
 import Foundation
 
 extension Double {
+    static let shortAnimationDuration: Double = 0.1
     static let defaultAnimationDuration: Double = 0.25
 }

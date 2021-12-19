@@ -18,14 +18,13 @@ final class HomeViewController: UIViewController {
     //MARK: - Properties
     var homeViewModel: HomeViewModelProtocol?
     private var stackContainer : CardCollectionView!
+    private var activityIndicator: UIActivityIndicatorView!
     
     override func loadView() {
         view = UIView()
         view.backgroundColor = .systemGray
-        stackContainer = CardCollectionView()
-        view.addSubview(stackContainer)
+        setupActivityIndicator()
         configureStackContainer()
-        stackContainer.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func viewDidLoad() {
@@ -35,11 +34,29 @@ final class HomeViewController: UIViewController {
     }
     
     //MARK: - Configurations
-    func configureStackContainer() {
+    private func configureStackContainer() {
+        stackContainer = CardCollectionView()
+        view.addSubview(stackContainer)
+        
+        stackContainer.translatesAutoresizingMaskIntoConstraints = false
         stackContainer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackContainer.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         stackContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - (.defaultMargins * 2)).isActive = true
         stackContainer.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 10/7).isActive = true
+    }
+    
+    private func setupActivityIndicator() {
+        if #available(iOS 13.0, *) {
+            activityIndicator = UIActivityIndicatorView(style: .large)
+        } else {
+            activityIndicator = UIActivityIndicatorView()
+        }
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.translatesAutoresizingMaskIntoConstraints =  false
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.startAnimating()
     }
 }
 
@@ -57,7 +74,12 @@ extension HomeViewController: CardCollectionViewDataSource {
 
 extension HomeViewController: HomeViewProtocol {
     func setLoading(_ isLoading: Bool) {
-        // TODO: handle loading status
+        if isLoading {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+        activityIndicator.isHidden = !isLoading
     }
     
     func reloadData() {

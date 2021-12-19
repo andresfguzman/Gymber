@@ -45,7 +45,7 @@ final class CardCollectionView: UIView {
     
     //MARK: - Configurations
     
-    func addCardFrame(index: Int, cardView: CardView) {
+    private func addCardFrame(index: Int, cardView: CardView) {
         var cardViewFrame = bounds
         let horizontalInset = (CGFloat(index) * self.horizontalInset)
         let verticalInset = CGFloat(index) * self.verticalInset
@@ -92,7 +92,7 @@ final class CardCollectionView: UIView {
         }
         
         visibleCards.reversed().enumerated().forEach { item in
-            UIView.animate(withDuration: .defaultAnimationDuration, delay: .zero, options: .allowUserInteraction) {
+            UIView.animate(withDuration: .shortAnimationDuration, delay: .zero, options: []) {
                 self.addCardFrame(index: item.offset, cardView: item.element)
                 item.element.layoutIfNeeded()
             } completion: { _ in
@@ -105,7 +105,7 @@ final class CardCollectionView: UIView {
         self.isUserInteractionEnabled = false
         card.resetPosition { _ in
             card.setupMatchedCard()
-            UIView.animate(withDuration: .defaultAnimationDuration, delay: 1.0) {
+            UIView.animate(withDuration: .defaultAnimationDuration, delay: 1.5) {
                 card.transform = CGAffineTransform(scaleX: 2, y: 2)
                 card.alpha = .zero
             } completion: { _ in
