@@ -30,7 +30,6 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Gymber"
         stackContainer.dataSource = self
         homeViewModel?.fetchModelData()
     }

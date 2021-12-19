@@ -29,7 +29,6 @@ extension GymberAnimationsHandler where Self: CardView {
             self.transform = .identity
             self.center = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
             self.alpha = 1
-            self.layoutIfNeeded()
         } completion: { finised in
             onFinished?(finised)
         }

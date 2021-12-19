@@ -15,14 +15,16 @@ final class CardView: UIView {
     private var likeButton = UIButton()
     private var dislikeButton = UIButton()
     private var bottomCardView = UIView()
+    private var topCardView = UIView()
+//    private var buttonStackView = UIStackView()
     
     private var containerView: UIView!
     
-    private let tiltRadian : CGFloat = 30 * CGFloat((Double.pi/180))
+    private let tiltRadian: CGFloat = 30 * CGFloat((Double.pi/180))
     
-    weak var delegate : SwipeCardDelegate?
+    weak var delegate: SwipeCardDelegate?
     
-    var viewModel : GymCardViewModel? {
+    var viewModel: GymCardViewModel? {
         didSet {
             titleLable.text = viewModel?.title
             guard let image = viewModel?.image else { return }
@@ -30,8 +32,8 @@ final class CardView: UIView {
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
         if #available(iOS 13.0, *) {
             backgroundColor = .systemBackground
         } else {
@@ -39,11 +41,15 @@ final class CardView: UIView {
         }
         configContainer()
         setupPhotoView()
-        setupTitle()
+        setupTopCardView()
         setupBottomCardView()
         layer.cornerRadius = .defaultCornerRadius
         clipsToBounds = true
         addPanGestureOnCards()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setupMatchedCard() {
@@ -67,6 +73,8 @@ final class CardView: UIView {
         
         UIView.transition(with: self, duration: .defaultAnimationDuration, options: [.curveEaseIn]) {
             self.bottomCardView.backgroundColor = .systemGreen
+            self.topCardView.backgroundColor = .systemGreen
+            self.titleLable.textColor = .white
             self.likeButton.alpha = .zero
             self.dislikeButton.alpha = .zero
             self.descriptionLabel.alpha = 1
@@ -98,17 +106,17 @@ final class CardView: UIView {
     }
     
     private func setupTitle() {
-        containerView.addSubview(titleLable)
+        topCardView.addSubview(titleLable)
         
-        titleLable.backgroundColor = .white
         titleLable.textColor = .black
         titleLable.textAlignment = .center
         titleLable.numberOfLines = .zero
         titleLable.font = UIFont.boldSystemFont(ofSize: 20)
         titleLable.translatesAutoresizingMaskIntoConstraints = false
-        titleLable.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        titleLable.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        titleLable.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        titleLable.leftAnchor.constraint(equalTo: topCardView.leftAnchor).isActive = true
+        titleLable.rightAnchor.constraint(equalTo: topCardView.rightAnchor).isActive = true
+        titleLable.topAnchor.constraint(equalTo: topCardView.topAnchor).isActive = true
+        titleLable.bottomAnchor.constraint(equalTo: topCardView.bottomAnchor).isActive = true
     }
     
     private func setupBottomCardView() {
@@ -122,44 +130,46 @@ final class CardView: UIView {
         bottomCardView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
         bottomCardView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        setupLikeButton()
-        setupDislikeButton()
+        setupStackButtonView()
     }
     
-    private func setupLikeButton() {
-        if #available(iOS 13.0, *) {
-            likeButton.setImage(.checkmark, for: .normal)
-        } else {
-            // Fallback on earlier versions
-        }
+    private func setupStackButtonView() {
+        likeButton.setImage(UIImage(named: "like_button_asset"), for: .normal)
+        likeButton.imageView?.contentMode = .scaleAspectFit
+        dislikeButton.setImage(UIImage(named: "dislike_button_asset"), for: .normal)
+        dislikeButton.imageView?.contentMode = .scaleAspectFit
         
-        bottomCardView.addSubview(likeButton)
+        let buttonStackView = UIStackView(arrangedSubviews: [dislikeButton, likeButton])
+        buttonStackView.alignment = .center
+        buttonStackView.distribution = .fillEqually
+        buttonStackView.axis = .horizontal
+        bottomCardView.addSubview(buttonStackView)
         
-        likeButton.translatesAutoresizingMaskIntoConstraints = false
-        likeButton.centerYAnchor.constraint(equalTo: bottomCardView.centerYAnchor).isActive = true
-        likeButton.rightAnchor.constraint(equalTo: bottomCardView.rightAnchor, constant: -(.defaultMargins * 2)).isActive = true
+        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
+        buttonStackView.leftAnchor.constraint(equalTo: bottomCardView.leftAnchor).isActive = true
+        buttonStackView.rightAnchor.constraint(equalTo: bottomCardView.rightAnchor).isActive = true
+        buttonStackView.bottomAnchor.constraint(equalTo: bottomCardView.bottomAnchor, constant: -4.0).isActive = true
+        buttonStackView.topAnchor.constraint(equalTo: bottomCardView.topAnchor, constant: 4.0).isActive = true
         
         likeButton.addTarget(self, action: #selector(likeButtonTapped(_:)), for: .touchUpInside)
+        dislikeButton.addTarget(self, action: #selector(dislikeButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    private func setupTopCardView() {
+        topCardView.backgroundColor = .white
+        containerView.addSubview(topCardView)
+        
+        topCardView.translatesAutoresizingMaskIntoConstraints = false
+        topCardView.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        topCardView.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+        topCardView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        topCardView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        
+        setupTitle()
     }
     
     @objc private func likeButtonTapped(_ caller: UIButton) {
         animateLikedGym()
-    }
-    
-    private func setupDislikeButton() {
-        if #available(iOS 13.0, *) {
-            dislikeButton.setImage(.remove, for: .normal)
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        bottomCardView.addSubview(dislikeButton)
-        
-        dislikeButton.translatesAutoresizingMaskIntoConstraints = false
-        dislikeButton.centerYAnchor.constraint(equalTo: bottomCardView.centerYAnchor).isActive = true
-        dislikeButton.leftAnchor.constraint(equalTo: bottomCardView.leftAnchor, constant: (.defaultMargins * 2)).isActive = true
-        
-        dislikeButton.addTarget(self, action: #selector(dislikeButtonTapped(_:)), for: .touchUpInside)
     }
     
     @objc private func dislikeButtonTapped(_ caller: UIButton) {
@@ -211,7 +221,6 @@ extension CardView: GymberAnimationsHandler {
             self.center = CGPoint(x: centerOfParentContainer.x + point.x + screenWidth * 3/4, y: centerOfParentContainer.y + point.y + 75)
             self.transform = CGAffineTransform(rotationAngle: self.tiltRadian)
             self.alpha = .zero
-            self.layoutIfNeeded()
         } completion: { _ in
             self.delegate?.swipeRightEnded(on: self)
         }
@@ -224,7 +233,6 @@ extension CardView: GymberAnimationsHandler {
             self.center = CGPoint(x: centerOfParentContainer.x + point.x - screenWidth * 3/4, y: centerOfParentContainer.y + point.y + 75)
             self.transform = CGAffineTransform(rotationAngle: -self.tiltRadian)
             self.alpha = .zero
-            self.layoutIfNeeded()
         } completion: { _ in
             self.delegate?.swipeLeftEnded(on: self)
         }

@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         welcomeModule.homeViewModel = homeViewModel
         
         let navController = UINavigationController(rootViewController: welcomeModule)
+        navController.navigationBar.isHidden = true
         window.rootViewController = navController
         
         self.window = window

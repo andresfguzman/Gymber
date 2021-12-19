@@ -35,8 +35,6 @@ final class CardCollectionView: UIView {
     func reloadData() {
         removeAllCardViews()
         guard let datasource = dataSource else { return }
-        setNeedsLayout()
-        layoutIfNeeded()
         visibleCardsCount = datasource.visibleCards()
         remainingcards = visibleCardsCount
         
@@ -95,9 +93,8 @@ final class CardCollectionView: UIView {
         
         visibleCards.reversed().enumerated().forEach { item in
             UIView.animate(withDuration: .defaultAnimationDuration, delay: .zero, options: .allowUserInteraction) {
-                item.element.center = self.center
                 self.addCardFrame(index: item.offset, cardView: item.element)
-                self.layoutIfNeeded()
+                item.element.layoutIfNeeded()
             } completion: { _ in
                 self.isUserInteractionEnabled = true
             }
