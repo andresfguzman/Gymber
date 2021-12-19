@@ -9,11 +9,10 @@
 /* Begin PBXBuildFile section */
 		7E224F31276E368B00E788AB /* GymberService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F30276E368B00E788AB /* GymberService.swift */; };
 		7E224F33276E36CF00E788AB /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F32276E36CF00E788AB /* BaseService.swift */; };
-		7E224F35276E376200E788AB /* UseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F34276E376200E788AB /* UseCaseImpl.swift */; };
 		7E224F37276E37B400E788AB /* URLSession+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F36276E37B400E788AB /* URLSession+Utils.swift */; };
-		7E224F39276E382400E788AB /* GetGyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F38276E382400E788AB /* GetGyms.swift */; };
+		7E224F39276E382400E788AB /* GetGymsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F38276E382400E788AB /* GetGymsUseCase.swift */; };
 		7E224F3B276E388000E788AB /* GymDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3A276E388000E788AB /* GymDTO.swift */; };
-		7E224F3D276E3D1600E788AB /* GetGymsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3C276E3D1600E788AB /* GetGymsService.swift */; };
+		7E224F3D276E3D1600E788AB /* GetGymsServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3C276E3D1600E788AB /* GetGymsServiceImpl.swift */; };
 		7E224F3F276E41AC00E788AB /* GetGymsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F3E276E41AC00E788AB /* GetGymsImpl.swift */; };
 		7E224F41276E47F000E788AB /* DispatchQueue+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F40276E47F000E788AB /* DispatchQueue+Utils.swift */; };
 		7E224F43276E4AB100E788AB /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E224F42276E4AB100E788AB /* UIImageView+Utils.swift */; };
@@ -25,13 +24,14 @@
 		7E5F38D7276C0428009BD960 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38D6276C0428009BD960 /* HomeViewController.swift */; };
 		7E5F38DC276C0429009BD960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F38DB276C0429009BD960 /* Assets.xcassets */; };
 		7E5F38DF276C0429009BD960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F38DD276C0429009BD960 /* LaunchScreen.storyboard */; };
-		7E5F38EA276C0429009BD960 /* GymberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38E9276C0429009BD960 /* GymberTests.swift */; };
+		7E5F38EA276C0429009BD960 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F38E9276C0429009BD960 /* HomeViewModelTests.swift */; };
 		7E5F3904276C07A6009BD960 /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F3903276C07A6009BD960 /* CardCollectionView.swift */; };
 		7EED99B7276D5B2D0098B4F8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99B6276D5B2D0098B4F8 /* CardView.swift */; };
 		7EED99B9276D5B610098B4F8 /* CardCollectionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99B8276D5B610098B4F8 /* CardCollectionProtocols.swift */; };
 		7EED99BB276D5B790098B4F8 /* Double+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99BA276D5B790098B4F8 /* Double+Utils.swift */; };
 		7EED99BD276D5B830098B4F8 /* CGFloat+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99BC276D5B830098B4F8 /* CGFloat+Utils.swift */; };
 		7EED99BF276D5BC30098B4F8 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EED99BE276D5BC30098B4F8 /* CardViewModel.swift */; };
+		7EEFA2AA276F9D66008782A1 /* GetGymsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFA2A9276F9D66008782A1 /* GetGymsUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +47,10 @@
 /* Begin PBXFileReference section */
 		7E224F30276E368B00E788AB /* GymberService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymberService.swift; sourceTree = "<group>"; };
 		7E224F32276E36CF00E788AB /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
-		7E224F34276E376200E788AB /* UseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseImpl.swift; sourceTree = "<group>"; };
 		7E224F36276E37B400E788AB /* URLSession+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Utils.swift"; sourceTree = "<group>"; };
-		7E224F38276E382400E788AB /* GetGyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGyms.swift; sourceTree = "<group>"; };
+		7E224F38276E382400E788AB /* GetGymsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsUseCase.swift; sourceTree = "<group>"; };
 		7E224F3A276E388000E788AB /* GymDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymDTO.swift; sourceTree = "<group>"; };
-		7E224F3C276E3D1600E788AB /* GetGymsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsService.swift; sourceTree = "<group>"; };
+		7E224F3C276E3D1600E788AB /* GetGymsServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsServiceImpl.swift; sourceTree = "<group>"; };
 		7E224F3E276E41AC00E788AB /* GetGymsImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsImpl.swift; sourceTree = "<group>"; };
 		7E224F40276E47F000E788AB /* DispatchQueue+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Utils.swift"; sourceTree = "<group>"; };
 		7E224F42276E4AB100E788AB /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
@@ -66,13 +65,14 @@
 		7E5F38DE276C0429009BD960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E5F38E0276C0429009BD960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5F38E5276C0429009BD960 /* GymberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E5F38E9276C0429009BD960 /* GymberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymberTests.swift; sourceTree = "<group>"; };
+		7E5F38E9276C0429009BD960 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		7E5F3903276C07A6009BD960 /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
 		7EED99B6276D5B2D0098B4F8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7EED99B8276D5B610098B4F8 /* CardCollectionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionProtocols.swift; sourceTree = "<group>"; };
 		7EED99BA276D5B790098B4F8 /* Double+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Utils.swift"; sourceTree = "<group>"; };
 		7EED99BC276D5B830098B4F8 /* CGFloat+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Utils.swift"; sourceTree = "<group>"; };
 		7EED99BE276D5BC30098B4F8 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		7EEFA2A9276F9D66008782A1 /* GetGymsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGymsUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,6 @@
 		7E224F2E276E360D00E788AB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				7E224F34276E376200E788AB /* UseCaseImpl.swift */,
 				7E224F30276E368B00E788AB /* GymberService.swift */,
 				7E224F32276E36CF00E788AB /* BaseService.swift */,
 				7E224F2F276E367400E788AB /* UseCases */,
@@ -117,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				7E224F3A276E388000E788AB /* GymDTO.swift */,
-				7E224F3C276E3D1600E788AB /* GetGymsService.swift */,
-				7E224F38276E382400E788AB /* GetGyms.swift */,
+				7E224F3C276E3D1600E788AB /* GetGymsServiceImpl.swift */,
+				7E224F38276E382400E788AB /* GetGymsUseCase.swift */,
 				7E224F3E276E41AC00E788AB /* GetGymsImpl.swift */,
 			);
 			path = UseCases;
@@ -186,7 +185,8 @@
 		7E5F38E8276C0429009BD960 /* GymberTests */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F38E9276C0429009BD960 /* GymberTests.swift */,
+				7E5F38E9276C0429009BD960 /* HomeViewModelTests.swift */,
+				7EEFA2A9276F9D66008782A1 /* GetGymsUseCaseTests.swift */,
 			);
 			path = GymberTests;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E224F3D276E3D1600E788AB /* GetGymsService.swift in Sources */,
+				7E224F3D276E3D1600E788AB /* GetGymsServiceImpl.swift in Sources */,
 				7EED99BB276D5B790098B4F8 /* Double+Utils.swift in Sources */,
 				7E224F3F276E41AC00E788AB /* GetGymsImpl.swift in Sources */,
 				7E224F45276E4DC700E788AB /* HomeViewModel.swift in Sources */,
@@ -329,14 +329,13 @@
 				7E5F38D3276C0428009BD960 /* AppDelegate.swift in Sources */,
 				7E224F3B276E388000E788AB /* GymDTO.swift in Sources */,
 				7E5F38D5276C0428009BD960 /* SceneDelegate.swift in Sources */,
-				7E224F39276E382400E788AB /* GetGyms.swift in Sources */,
+				7E224F39276E382400E788AB /* GetGymsUseCase.swift in Sources */,
 				7EED99B7276D5B2D0098B4F8 /* CardView.swift in Sources */,
 				7E224F37276E37B400E788AB /* URLSession+Utils.swift in Sources */,
 				7E224F31276E368B00E788AB /* GymberService.swift in Sources */,
 				7EED99B9276D5B610098B4F8 /* CardCollectionProtocols.swift in Sources */,
 				7EED99BF276D5BC30098B4F8 /* CardViewModel.swift in Sources */,
 				7E224F33276E36CF00E788AB /* BaseService.swift in Sources */,
-				7E224F35276E376200E788AB /* UseCaseImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5F38EA276C0429009BD960 /* GymberTests.swift in Sources */,
+				7EEFA2AA276F9D66008782A1 /* GetGymsUseCaseTests.swift in Sources */,
+				7E5F38EA276C0429009BD960 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +551,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aguzman.GymberTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -571,7 +571,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WYWUC4P4DY;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aguzman.GymberTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

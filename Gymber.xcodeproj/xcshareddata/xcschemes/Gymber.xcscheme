@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,16 +36,6 @@
                BlueprintIdentifier = "7E5F38E4276C0429009BD960"
                BuildableName = "GymberTests.xctest"
                BlueprintName = "GymberTests"
-               ReferencedContainer = "container:Gymber.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E5F38EE276C0429009BD960"
-               BuildableName = "GymberUITests.xctest"
-               BlueprintName = "GymberUITests"
                ReferencedContainer = "container:Gymber.xcodeproj">
             </BuildableReference>
          </TestableReference>

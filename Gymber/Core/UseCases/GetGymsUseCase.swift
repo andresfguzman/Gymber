@@ -12,6 +12,8 @@ enum CityID: String {
     case amsterdam = "AMS"
 }
 
-protocol GetGyms {
+protocol GetGymsUseCase {
+    var service: GetGymsService? { get set }
+    
     func execute(for cityID: CityID, onFinished: @escaping GymberCompletion<[GymCardViewModel]>)
 }

@@ -7,17 +7,17 @@
 
 import Foundation
 
-final class GetGymsImpl: UseCaseImpl, GetGyms {
-    var service: GymberService
+final class GetGymsImpl: GetGymsUseCase {
+    var service: GetGymsService?
     
     private var matchesCount: Int = .zero
     
-    init(service: GymberService = GetGymsService()) {
+    init(service: GetGymsService = GetGymsServiceImpl()) {
         self.service = service
     }
     
     func execute(for cityID: CityID, onFinished: @escaping GymberCompletion<[GymCardViewModel]>) {
-        (service as? GetGymsService)?.fetchGyms(at: cityID, onFinished: { result in
+        service?.fetchGyms(at: cityID, onFinished: { result in
             switch result {
             case .success(let responseDTO):
                 let viewModel = responseDTO.data.map({ GymCardViewModel(cardId: $0.id,

@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class GetGymsService: BaseService {
+protocol GetGymsService {
+    func fetchGyms(at city: CityID, onFinished: @escaping GymberCompletion<GymDTO>)
+}
+
+final class GetGymsServiceImpl: BaseService, GetGymsService {
     
     func fetchGyms(at city: CityID, onFinished: @escaping GymberCompletion<GymDTO>) {
         // TODO: Adjust endpoint management.

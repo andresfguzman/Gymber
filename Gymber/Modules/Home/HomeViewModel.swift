@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeViewModelProtocol: AnyObject {
     var view: HomeViewProtocol? { get set }
+    var useCase: GetGymsUseCase? { get set }
     
     func fetchModelData()
     func model(at index: Int) -> GymCardViewModel
@@ -17,25 +18,26 @@ protocol HomeViewModelProtocol: AnyObject {
 
 final class HomeViewModel: HomeViewModelProtocol {
     weak var view: HomeViewProtocol?
-    var viewModelData: [GymCardViewModel] = [] {
+    var useCase: GetGymsUseCase?
+    
+    private var gymCardList: [GymCardViewModel] = [] {
         didSet {
             view?.reloadData()
         }
     }
     
-    var isLoading = true {
+    private var isLoading = true {
         didSet {
             view?.setLoading(isLoading)
         }
     }
     
     func fetchModelData() {
-        let useCase = GetGymsImpl()
-        useCase.execute(for: .utrecht) { [weak self] result in
+        useCase?.execute(for: .utrecht) { [weak self] result in
             self?.isLoading = false
             switch result {
             case .success(let gymsVM):
-                self?.viewModelData = gymsVM
+                self?.gymCardList = gymsVM
             case.failure(let error):
                 self?.view?.showErrorAlert(with: error.localizedDescription)
             }
@@ -43,10 +45,10 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
     
     func model(at index: Int) -> GymCardViewModel {
-        return viewModelData[index]
+        return gymCardList[index]
     }
     
     func cardsCount() -> Int {
-        return viewModelData.count
+        return gymCardList.count
     }
 }

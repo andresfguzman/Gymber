@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let welcomeModule = HomeViewController()
         let homeViewModel = HomeViewModel()
+        let getGymsUseCase = GetGymsImpl()
         homeViewModel.view = welcomeModule
+        homeViewModel.useCase = getGymsUseCase
         welcomeModule.homeViewModel = homeViewModel
         
         let navController = UINavigationController(rootViewController: welcomeModule)
